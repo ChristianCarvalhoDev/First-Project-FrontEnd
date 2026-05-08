@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishop Games | Sua Loja Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="admin-container">
+    <aside class="sidebar">
+        <div class="logo">Bishop<span>Admin</span></div>
+        <nav>
+            <ul>
+                <li class="active"><i class="fas fa-chart-line"></i> Dashboard</li>
+                <li><i class="fas fa-box"></i> Produtos</li>
+                <li><i class="fas fa-users"></i> Clientes</li>
+                <li><i class="fas fa-shopping-basket"></i> Pedidos</li>
+                <li><i class="fas fa-cog"></i> Configurações</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="admin-content">
+        <header class="admin-header">
+            <h2>Gerenciar Produtos</h2>
+            <button class="btn-add-item">+ Novo Jogo</button>
+        </header>
+
+        <section class="admin-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagem</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td><img src="https://via.placeholder.com/40" alt="thumb"></td>
+                        <td>Elden Ring</td>
+                        <td>R$ 199,90</td>
+                        <td>15</td>
+                        <td>
+                            <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                            <button class="del-btn"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<div id="modal-product" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Cadastrar Novo Jogo</h3>
+        <form id="product-form">
+            <input type="text" id="prod-name" placeholder="Nome do Jogo" required>
+            <input type="text" id="prod-price" placeholder="Preço (Ex: R$ 199,90)" required>
+            <input type="text" id="prod-img" placeholder="URL da Imagem" required>
+            <select id="prod-category">
+                <option value="PC">PC</option>
+                <option value="Console">Console</option>
+                <option value="Acessórios">Acessórios</option>
+            </select>
+            <button type="submit" class="btn-main">Salvar Produto</button>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
